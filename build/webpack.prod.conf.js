@@ -78,7 +78,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      // chunks: ['app']
     }),
     new HtmlWebpackPlugin({
       // filename: config.build.indexFei,
@@ -97,6 +98,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
       // chunks: ['manifest', 'vendor', 'appFeiEntry'] // fei_tip: build/webpack.base.conf.js 中 entry
+      chunks: ['manifest', 'vendor', 'appFeiEntry'],// fei_tip: 按需加载
     }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
