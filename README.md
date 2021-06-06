@@ -42,3 +42,15 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## 多入口
+
+```
+#开发阶段访问地址
+http://localhost:8080/#/
+http://localhost:8080/indexfei.html#/
+
+#打包后访问地址
+http://xxx.fei.xxx/#/
+http://xxx.fei.xxx/indexFei.html#/
+```
+

@@ -12,8 +12,9 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
+  entry: { // fei_tip: 指向入口文件
+    app: './src/main.js',
+    appFeiEntry: './src/mainFei.js', // fei_tip: build/webpack.dev.conf.js 中
   },
   output: {
     path: config.build.assetsRoot,

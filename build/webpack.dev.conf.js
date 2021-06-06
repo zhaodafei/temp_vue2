@@ -55,7 +55,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'indexfei.html', // fei_tip:(indexFei注意这里不要用驼峰)  开发首页访问地址首页名字
+      template: 'indexFei.html', // fei_tip: 指向模板文件
+      inject: true,
+      chunks: ['appFeiEntry'], // fei_tip: build/webpack.base.conf.js 中 entry
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
