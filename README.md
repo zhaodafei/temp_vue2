@@ -8,4 +8,9 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 
 
-aaaaaaaaa
+### 多入口
+纯 Vue3 多入口,没有路由
+```wiki
+http://localhost:3000/
+http://localhost:3000/project.html
+```
