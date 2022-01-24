@@ -25,6 +25,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
+        // 历史模式配置 index-foo
+        { from:/^\/index-foo\/.*$/, to: path.posix.join(config.dev.assetsPublicPath, 'index-foo.html') },
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
@@ -63,6 +65,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'indexFei.html', // fei_tip: 指向模板文件
       inject: true,
       chunks: ['appFeiEntry'], // fei_tip: build/webpack.base.conf.js 中 entry
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index-foo.html',
+      template: 'indexFoo.html',
+      inject: true,
+      chunks: ['appFooEntry'],
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

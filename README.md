@@ -48,6 +48,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 #开发阶段访问地址
 http://localhost:8080/#/
 http://localhost:8080/indexfei.html#/
+历史模式访问 http://localhost:8080/index-foo/
 
 #打包后访问地址
 http://xxx.fei.xxx/#/

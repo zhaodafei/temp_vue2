@@ -15,6 +15,7 @@ module.exports = {
   entry: { // fei_tip: 指向入口文件
     app: './src/main.js',
     appFeiEntry: './src/mainFei.js', // fei_tip: build/webpack.dev.conf.js 中
+    appFooEntry: './src/mainFoo.js',
   },
   output: {
     path: config.build.assetsRoot,

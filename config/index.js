@@ -40,6 +40,8 @@ module.exports = {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
     indexFei: path.resolve(__dirname, '../dist/indexFei.html'),
+    indexFoo: path.resolve(__dirname, '../dist/index-foo.html'),
+    // indexFoo: path.resolve(__dirname, '../dist/indexFoo.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),

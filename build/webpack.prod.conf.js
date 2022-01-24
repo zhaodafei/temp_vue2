@@ -100,6 +100,18 @@ const webpackConfig = merge(baseWebpackConfig, {
       // chunks: ['manifest', 'vendor', 'appFeiEntry'] // fei_tip: build/webpack.base.conf.js 中 entry
       chunks: ['manifest', 'vendor', 'appFeiEntry'],// fei_tip: 按需加载
     }),
+    new HtmlWebpackPlugin({
+      filename: config.build.indexFoo,
+      template: 'indexFoo.html',// fei_tip:(指向模板文件)
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      },
+      chunksSortMode: 'dependency',
+      chunks: ['manifest', 'vendor', 'appFooEntry'],// fei_tip: 按需加载
+    }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
