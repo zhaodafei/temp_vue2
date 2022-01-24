@@ -28,7 +28,7 @@ http://localhost:3000/#/
 http://localhost:3000/project.html#/
 
 ```
-历史模式 模式 ??
+历史模式 模式 ????
 
 ```wiki
 http://localhost:3000/    这个ok
